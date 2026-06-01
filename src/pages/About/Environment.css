@@ -1,0 +1,9 @@
+.environment {
+  width: 100%;
+  background-color: var(--bg-navbar);
+
+  .container {
+    display: grid;
+    
+  }
+}

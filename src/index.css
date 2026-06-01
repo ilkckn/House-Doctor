@@ -29,7 +29,14 @@
 
   --bg-navbar: #f8f9ff;
   --bg-overlay: rgba(0, 0, 0, 0.1);
-  
+  --bg-overlay-gradient: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.65) 0%,
+    rgba(0, 0, 0, 0.3)  40%,
+    rgba(0, 0, 0, 0.15) 75%,
+    rgba(0, 0, 0, 0)    100%
+  );
+
   --color-text-primary: #f5f5f5;
   --color-text-secondary: #a0a0a0;
   --color-text-muted: #555555;
@@ -51,6 +58,18 @@
   --accent-700: #1b30a3;
   --accent-800: #152480;
   --accent-900: #0e185c;
+
+  /* --- Navy --- */
+  --navy-50: #e6f0f8;
+  --navy-100: #b3d1e8;
+  --navy-200: #80b2d8;
+  --navy-300: #4d93c8;
+  --navy-400: #2678b5;
+  --navy-500: #004275;
+  --navy-600: #003a68;
+  --navy-700: #002f55;
+  --navy-800: #002343;
+  --navy-900: #001630;
 
   /* --- Teal ---*/
   --teal-50: #f0fafa;
@@ -87,6 +106,18 @@
   --secondary-200: #99d4d4;
   --secondary-100: #ccebeb;
   --secondary-50: #e8f5f5;
+
+  /* --- Lime --- */
+  --lime-50: #f0fff4;
+  --lime-100: #d4ffe1;
+  --lime-200: #a8ffca;
+  --lime-300: #6bff8f;
+  --lime-400: #3df570;
+  --lime-500: #18e052;
+  --lime-600: #0dba40;
+  --lime-700: #0a8f31;
+  --lime-800: #076624;
+  --lime-900: #044018;
 
   /* --- Tertiary --- */
   --tertiary-900: #052e16;
