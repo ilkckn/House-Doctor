@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --navbar-height: 7.5rem;
+  --max-width: 1280px;
+  --gutter: clamp(1.6rem, 4vw, 4rem);
+
+  /* --- Typography --- */
+  --font-heading: "Work Sans", sans-serif;
+  --font-body: "Inter", sans-serif;
+
+  --fw-thin: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  --lh-tight: 1.1;
+  --lh-normal: 1.5;
+  --lh-loose: 1.8;
+
+  --bg-navbar: #f8f9ff;
+  --bg-overlay: rgba(0, 0, 0, 0.1);
+  
+  --color-text-primary: #f5f5f5;
+  --color-text-secondary: #a0a0a0;
+  --color-text-muted: #555555;
+  --color-accent: #4a5d73;
+  --color-accent-hover: #003d7a;
+  --color-accent-muted: #e85d0422;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-header: #0d1c2f;
+
+  /* --- Accent - Mavi ----*/
+  --accent-50: #eef4ff;
+  --accent-100: #d5e3fd;
+  --accent-200: #aabffb;
+  --accent-300: #7d99f7;
+  --accent-400: #5573f0;
+  --accent-500: #3352e8;
+  --accent-600: #2440cc;
+  --accent-700: #1b30a3;
+  --accent-800: #152480;
+  --accent-900: #0e185c;
+
+  /* --- Teal ---*/
+  --teal-50: #f0fafa;
+  --teal-100: #d6f7f7;
+  --teal-200: #b0f0f0;
+  --teal-300: #90efef;
+  --teal-400: #5fdddd;
+  --teal-500: #35c5c5;
+  --teal-600: #22a3a3;
+  --teal-700: #177f7f;
+  --teal-800: #0f5e5e;
+  --teal-900: #083d3d;
+
+  /* --- Primary - Mavi) --- */
+  --primary-900: #001f3d;
+  --primary-800: #002d5a;
+  --primary-700: #003d7a;
+  --primary-600: #004d8f;
+  --primary-500: #005a9c; /* ana renk */
+  --primary-400: #1a6faa;
+  --primary-300: #4d93c4;
+  --primary-200: #99c3e0;
+  --primary-100: #cce0f0;
+  --primary-50: #e8f2f9;
+
+  /* --- Secondary --- */
+  --secondary-900: #001f1f;
+  --secondary-800: #002e2e;
+  --secondary-700: #004040;
+  --secondary-600: #005c5c;
+  --secondary-500: #008080; /* ana renk */
+  --secondary-400: #1a9494;
+  --secondary-300: #4db3b3;
+  --secondary-200: #99d4d4;
+  --secondary-100: #ccebeb;
+  --secondary-50: #e8f5f5;
+
+  /* --- Tertiary --- */
+  --tertiary-900: #052e16;
+  --tertiary-800: #0a4a24;
+  --tertiary-700: #0f6b35;
+  --tertiary-600: #168f47;
+  --tertiary-500: #22c55e; /* ana renk */
+  --tertiary-400: #4cd47a;
+  --tertiary-300: #7fe0a0;
+  --tertiary-200: #b3edc5;
+  --tertiary-100: #d9f6e3;
+  --tertiary-50: #f0fdf4;
+
+  /* --- Neutral --- */
+  --neutral-900: #0a0f1a;
+  --neutral-800: #131c2e;
+  --neutral-700: #1e2d42;
+  --neutral-600: #28405c;
+  --neutral-500: #334155; /* ana renk */
+  --neutral-400: #4a5d73;
+  --neutral-300: #7a8fa3;
+  --neutral-200: #b0bec9;
+  --neutral-100: #d8e0e8;
+  --neutral-50: #f1f4f7;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  padding-top: var(--navbar-height);
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.footer-container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin-inline: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  color: var(--color-header);
+}
+
+p {
+  font-family: var(--font-body);
+}

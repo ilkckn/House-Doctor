@@ -1,0 +1,268 @@
+.menu-overlay {
+  display: none;
+}
+
+.navbar {
+  background: var(--bg-navbar);
+  padding-block: 2rem;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 111;
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+
+      p {
+        font-family: var(--font-body);
+        font-weight: var(--fw-semibold);
+        font-size: 1.7rem;
+        letter-spacing: -0.5px;
+        word-spacing: -1px;
+        color: var(--primary-800);
+      }
+
+      img {
+        width: 3rem;
+        height: 3rem;
+        background-position: center;
+        background-size: cover;
+        color: var(--primary-800);
+      }
+    }
+
+    .links {
+      flex: 3;
+
+      ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        list-style: none;
+
+        li {
+          padding-inline: 2rem;
+
+          a {
+            text-decoration: none;
+            font-family: var(--font-body);
+            font-weight: var(--fw-semibold);
+            font-size: 1.5rem;
+            letter-spacing: -0.1px;
+            color: var(--neutral-300);
+            transition: all 0.3s ease-in-out;
+            position: relative;
+
+            &:hover {
+              color: var(--primary-500);
+            }
+
+            &.active {
+              color: var(--primary-500);
+            }
+
+            &::after {
+              content: "";
+              position: absolute;
+              bottom: -0.6rem;
+              left: 0;
+              width: 100%;
+              height: 0.2rem;
+              background-color: var(--primary-500);
+              transform: scale(0);
+              transform-origin: right;
+              transition: transform 0.3s ease-in-out;
+            }
+
+            &:hover::after {
+              transform: scale(1);
+              transform-origin: left;
+            }
+
+            &.active::after {
+              transform: scale(1);
+              transform-origin: left;
+            }
+          }
+        }
+      }
+    }
+
+    .menuIcon-appointmentButton {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 1rem;
+
+      .menuIcon {
+        font-size: 1.8rem;
+        color: var(--primary-800);
+        display: none;
+        cursor: pointer;
+      }
+
+      .appointment-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 1rem;
+        width: fit-content;
+        padding: 0.8rem 2rem;
+        border-radius: 5rem;
+        background-color: var(--primary-800);
+        color: var(--color-white);
+        font-size: 1.4rem;
+        font-family: var(--font-body);
+        font-weight: var(--fw-regular);
+        word-spacing: -1px;
+        letter-spacing: 1px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          transform: translateY(-0.3rem);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .menu-overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 98;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+
+    &.visible {
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
+
+  .navbar {
+    .container {
+      justify-content: space-between;
+      position: relative;
+
+      .logo {
+        flex: 1;
+      }
+      .links {
+        display: none;
+      }
+      .menuIcon-appointmentButton {
+        flex: 1;
+
+        .menuIcon {
+          display: block;
+          font-size: 2.3rem;
+        }
+
+        .appointment-btn {
+          display: none;
+        }
+      }
+
+      .mobile-menu-container {
+        position: absolute;
+        top: 5rem; /* navbar'ın hemen altından başlar */
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        pointer-events: none;
+
+        .mobile-menu {
+          position: relative;
+          z-index: 99; /* overlay'in üstünde */
+          width: 100%;
+          height: fit-content;
+          background-color: var(--neutral-50);
+          display: flex;
+          flex-direction: column;
+          pointer-events: all;
+
+          .logo {
+            gap: 0.5rem;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding-top: 3rem;
+
+            img {
+              width: 3.5rem;
+              height: 3.5rem;
+            }
+            p {
+              font-size: 1.5rem;
+              letter-spacing: -0.5px;
+            }
+          }
+
+          .links {
+            padding-block: 8rem;
+            display: flex !important;
+            flex-direction: column;
+            align-items: center;
+
+            ul {
+              flex-direction: column;
+
+              li {
+                padding: 0.8rem;
+
+                a {
+                  font-size: 1.5rem;
+                  letter-spacing: 1px;
+                  color: var(--primary-800);
+
+                  &.active {
+                    border-radius: 3rem;
+                    background-color: var(--primary-100);
+                    color: var(--primary-800);
+                    padding: 0.7rem 2rem;
+                  }
+
+                  &::after {
+                    display: none;
+                  }
+                }
+              }
+            }
+          }
+
+          .mobile-appointment {
+            button {
+              font-size: 1.4rem;
+              font-weight: var(--fw-regular);
+              letter-spacing: 1px;
+              background-color: var(--primary-800);
+              color: var(--color-white);
+              padding-inline: 2rem;
+              padding-block: 1rem;
+              border: none;
+              border-radius: 3rem;
+              margin-top: 2rem;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+}
