@@ -36,6 +36,13 @@
     rgba(0, 0, 0, 0.15) 75%,
     rgba(0, 0, 0, 0)    100%
   );
+  --bg-overlay-gradient-blue: linear-gradient(
+    to right,
+    rgba(0, 42, 90, 0.75) 0%,
+    rgba(0, 42, 90, 0.5)  40%,
+    rgba(0, 42, 90, 0.15) 75%,
+    rgba(0, 42, 90, 0)    100%
+  );
 
   --color-text-primary: #f5f5f5;
   --color-text-secondary: #a0a0a0;

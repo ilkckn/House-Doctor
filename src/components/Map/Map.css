@@ -1,0 +1,91 @@
+.map {
+  width: 100%;
+  padding-block: 3rem;
+
+  .container {
+    .content {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      & > h1 {
+        font-size: 3.5rem;
+        font-weight: var(--fw-semibold);
+        color: var(--navy-600);
+        margin-bottom: 1rem;
+      }
+
+      & > p {
+        font-size: 1.6rem;
+        font-weight: var(--fw-thin);
+        letter-spacing: 1px;
+        margin-bottom: 4rem;
+      }
+
+      .map-itself {
+        border-radius: 1.5rem;
+      }
+    }
+  }
+}
+
+/* =============================================
+   RESPONSIVE — Map
+   820px : tablet
+   480px : mobil
+   ============================================= */
+
+@media (max-width: 820px) {
+  .map {
+    padding-block: 2.5rem;
+
+    .container {
+      .content {
+        & > h1 {
+          font-size: 2.8rem;
+          text-align: center;
+          padding-inline: 2rem;
+        }
+
+        & > p {
+          font-size: 1.5rem;
+          text-align: center;
+          margin-bottom: 3rem;
+        }
+
+        .map-itself {
+          border-radius: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .map {
+    padding-block: 2rem;
+
+    .container {
+      .content {
+        & > h1 {
+          font-size: 2.2rem;
+          text-align: center;
+          padding-inline: 1rem;
+          line-height: 3rem;
+        }
+
+        & > p {
+          font-size: 1.4rem;
+          letter-spacing: 0.5px;
+          margin-bottom: 2rem;
+          text-align: center;
+        }
+
+        .map-itself {
+          border-radius: 0.8rem;
+        }
+      }
+    }
+  }
+}

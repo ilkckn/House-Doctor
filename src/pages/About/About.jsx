@@ -1,4 +1,5 @@
 import "./About.css";
+import Environment from "./Environment";
 import Philosophy from "./Philosophy";
 import Team from "./Team";
 
@@ -35,6 +36,10 @@ const About = () => {
 
         <div className="team">
           <Team />
+        </div>
+
+        <div className="environment">
+          <Environment />
         </div>
       </div>
     </section>

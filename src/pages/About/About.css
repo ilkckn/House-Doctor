@@ -136,3 +136,147 @@
     }
   }
 }
+
+/* =============================================
+   RESPONSIVE — About Hero
+   820px : tablet
+   480px : mobil
+   ============================================= */
+@media (max-width: 1024px) {
+  .about {
+    .container {
+      .hero {
+        display: flex;
+
+        .content-l {
+          flex: 3;
+        }
+        
+        .content-r {
+          flex: 2;
+          
+          img {
+            width: 100%;
+          }
+
+          .tag {
+            left: 2rem;
+            bottom: -3rem;
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 820px) {
+  .about {
+    .container {
+      .hero {
+        grid-template-columns: 1fr;
+        padding-inline: 3rem;
+        padding-block: 6rem;
+        gap: 3rem;
+
+        .content-l {
+          & > h1 {
+            text-align: center;
+            font-size: 3.8rem;
+          }
+          & > p {
+            text-align: center;
+            font-size: 1.6rem;
+            line-height: 2.6rem;
+          }
+
+          .btns {
+            justify-content: center;
+            & > button {
+              padding-inline: 3rem;
+              font-size: 1.4rem;
+            }
+          }
+        }
+
+        .content-r {
+          width: 100%;
+          justify-content: center;
+
+          img {
+            width: 65%;
+            transform: rotate(0);
+          }
+
+          .tag {
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -2rem;
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .about {
+    .container {
+      .hero {
+        padding-inline: 2rem;
+        padding-block: 5rem;
+        gap: 4rem;
+
+        .content-l {
+          gap: 0.8rem;
+
+          & > h1 {
+            font-size: 3.2rem;
+            letter-spacing: -0.5px;
+            word-spacing: -2px;
+          }
+
+          & > p {
+            font-size: 1.45rem;
+            line-height: 2.3rem;
+          }
+
+          .btns {
+            flex-direction: column;
+            align-items: stretch;
+            gap: 1rem;
+            margin-top: 1.5rem;
+
+            & > button {
+              justify-content: center;
+              padding-inline: 2rem;
+              padding-block: 1.2rem;
+              font-size: 1.4rem;
+            }
+          }
+        }
+
+        .content-r {
+          width: 100%;
+
+          img {
+            width: 90%;
+            transform: rotate(1deg);
+          }
+
+          .tag {
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -2rem;
+            padding-inline: 1.5rem 3rem;
+
+            span {
+              font-size: 1.2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

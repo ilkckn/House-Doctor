@@ -57,10 +57,10 @@
           a {
             text-decoration: none;
             font-family: var(--font-body);
-            font-weight: var(--fw-semibold);
+            font-weight: var(--fw-regular);
             font-size: 1.5rem;
             letter-spacing: -0.1px;
-            color: var(--neutral-300);
+            color: var(--neutral-400);
             transition: all 0.3s ease-in-out;
             position: relative;
 
